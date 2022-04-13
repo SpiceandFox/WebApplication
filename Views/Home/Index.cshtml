@@ -1,0 +1,19 @@
+﻿@using WebApplication.Models
+<div class="jumbotron">
+    <h1>Zitat des Tages</h1>
+    <p class="lead">"You miss 100% of the shots you don't take. -Wayne Gretzky" -Michael Scott</p>
+</div>
+<div class="row" style="align-items:stretch">
+    @{
+        List<Quote> quotes = ViewBag.Message;
+        foreach (var quote in quotes)
+        {
+            <div class="col-md-4">
+                <h2>"@quote.QuoteText"</h2>
+                <p>
+                       --@quote.Author
+                </p>
+            </div>
+        }
+    }
+</div>
