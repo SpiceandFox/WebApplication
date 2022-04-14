@@ -9,7 +9,9 @@ namespace WebApplication.Models
     [DataContract]
     public class Quote
     {
+        public static Quote quoteOfTheDay = new Quote(17, "You miss 100% of the shots you don't take. -Wayne Gretzky", "Michael Scott", DateTime.Now);
         public static List<Quote> allQuotes = new List<Quote> {
+            new Quote(17, "You miss 100% of the shots you don't take. -Wayne Gretzky", "Michael Scott", DateTime.Now),
             new Quote(16, "Ich kenne keinen sicheren Weg zum Erfolg, aber einen sicheren Weg zum Misserfolg: es jedem recht machen zu wollen.", "Platon", DateTime.Now),
             new Quote(15, "Die Hartnäckigen gewinnen die Schlachten.", "Napoleon Bonaparte", DateTime.Now),
             new Quote(14, "Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.", "Seneca", DateTime.Now),

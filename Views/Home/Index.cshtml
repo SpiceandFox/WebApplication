@@ -1,7 +1,7 @@
 ﻿@using WebApplication.Models
 <div class="jumbotron">
     <h1>Zitat des Tages</h1>
-    <p class="lead">"You miss 100% of the shots you don't take. -Wayne Gretzky" -Michael Scott</p>
+    <p class="lead">"@Quote.quoteOfTheDay.QuoteText" -@Quote.quoteOfTheDay.Author</p>
 </div>
 <div class="row" style="align-items:stretch">
     @{
@@ -11,7 +11,7 @@
             <div class="col-md-4">
                 <h2>"@quote.QuoteText"</h2>
                 <p>
-                       --@quote.Author
+                   -@quote.Author
                 </p>
             </div>
         }
