@@ -45,27 +45,9 @@ namespace WebApplication.Controllers
         /// <param name="quote">Zitat als JSON</param>
         public void Post([FromBody] Quote quote)
         {
-            int id = Quote.allQuotes.Last().Id + 1;
+            int id = Quote.allQuotes.First().Id + 1;
             quote.Id = id;
             Quote.allQuotes.Insert(0, quote);
-        }
-
-        /// <summary>
-        /// Postet das mitgegebene Zitat auf der Webseite mit anonymen Autor
-        /// </summary>
-        /// <param name="quoteText">Zitat als string</param>
-        public void Post(string quoteText)
-        {
-            int id;
-            if (Quote.allQuotes.Count == 0)
-            {
-                id = 0;
-            }
-            else
-            {
-                id = Quote.allQuotes.Last().Id + 1;
-            }
-            Quote.allQuotes.Insert(0, new Quote(id, quoteText, "Anonym", DateTime.Now));
         }
 
         // PUT: api/Quote/5
